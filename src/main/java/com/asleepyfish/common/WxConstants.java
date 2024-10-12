@@ -50,6 +50,11 @@ public final class WxConstants {
     public static final String MEET_DATE = "2024-07-29";
 
     /**
+     * 在一起日期
+     */
+    public static final String TOGHTER_DATE = "2024-10-01";
+
+    /**
      * 客服
      */
     public static String CUSTOMER_SERVICE = "ChatGPT@ChatGPT";

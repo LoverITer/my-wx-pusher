@@ -4,11 +4,12 @@ import com.asleepyfish.dto.IdentityInfo;
 import com.asleepyfish.enums.WxTemplateType;
 import com.asleepyfish.strategy.WxTemplateContext;
 import com.asleepyfish.util.SpringUtils;
+
+import java.util.Objects;
+
 import lombok.extern.slf4j.Slf4j;
 import me.chanjar.weixin.mp.api.WxMpService;
 import me.chanjar.weixin.mp.bean.template.WxMpTemplateMessage;
-
-import java.util.Objects;
 
 /**
  * @Author: asleepyfish
@@ -34,6 +35,7 @@ public class WxSubscriber implements Subscriber {
             WxMpService wxMpService = SpringUtils.getBean(WxMpService.class);
             // 配置模板信息
             WxMpTemplateMessage wxMpTemplateMessage = new WxMpTemplateMessage();
+            wxMpTemplateMessage.setUrl("https://www.baidu.com");
             // 发送的模板信息
             wxMpTemplateMessage.setTemplateId(wxTemplateType.getTemplateId());
             // 接收人
