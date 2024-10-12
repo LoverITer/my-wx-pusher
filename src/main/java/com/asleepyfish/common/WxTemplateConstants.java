@@ -10,9 +10,9 @@ public class WxTemplateConstants {
     private WxTemplateConstants() {
     }
 
-    public static final String SPECIAL_MORNING = "lJs7Y5qCziPd9OAR142X98Q7u2ZXA6MAzf0K6SA7ITE";
+    public static final String SPECIAL_MORNING = "B6SY6_4jbehIwLHMjy7LtOE2Qqk-vacMBcBnDbhCHAY";
 
-    public static final String COMMON_MORNING = "DaLno0jbl6gbX2XVYkECDZf0VXOr3dPW0dAo0WOBLDg";
+    public static final String COMMON_MORNING = "B83_CuZimOYj137Y8YY5egF_kdRfYzt8emJ0ZFy36q4";
 
     public static final String SPECIAL_AFTERNOON = "nIk83ClpyrnbxXE6O1WP3hhpcZTIjz-DAcriSfF_fu8";
 

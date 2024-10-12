@@ -1,6 +1,5 @@
 package com.asleepyfish.strategy.template;
 
-import cn.hutool.http.HttpUtil;
 import com.alibaba.fastjson2.JSONArray;
 import com.alibaba.fastjson2.JSONObject;
 import com.asleepyfish.common.WxConstants;
@@ -8,12 +7,15 @@ import com.asleepyfish.common.WxTemplateConstants;
 import com.asleepyfish.dto.IdentityInfo;
 import com.asleepyfish.strategy.WxTemplateStrategy;
 import com.asleepyfish.util.WxOpUtils;
-import me.chanjar.weixin.mp.bean.template.WxMpTemplateData;
-import me.chanjar.weixin.mp.bean.template.WxMpTemplateMessage;
+
 import org.springframework.stereotype.Service;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+
+import cn.hutool.http.HttpUtil;
+import me.chanjar.weixin.mp.bean.template.WxMpTemplateData;
+import me.chanjar.weixin.mp.bean.template.WxMpTemplateMessage;
 
 /**
  * @Author: asleepyfish
@@ -42,6 +44,7 @@ public class SpecialMorningStrategy implements WxTemplateStrategy {
         String dailyEnglishStr = HttpUtil.get(dailyEnglishUrl);
         JSONObject dailyEnglishObject = JSONArray.parseArray(JSONObject.parseObject(dailyEnglishStr).get("newslist").toString()).getJSONObject(0);
         // 英文句子
+        //{"code":200,"msg":"success","result":{"content":"你的笑容没有酒，我却醉的像条狗"}}
         String english = dailyEnglishObject.get("content").toString();
         // 20230505更新，wx平台最新规范[https://developers.weixin.qq.com/community/develop/doc/000a2ae286cdc0f41a8face4c51801]
         // 每个模板块最多只能填充20个字符，需要对超长内容切割
